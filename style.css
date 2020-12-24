@@ -197,7 +197,6 @@ header {
 @media screen and (max-width: 600px) {
     .next_page {
         height: 50%;
-        /* left: 73%; */
     }
     .top {
         height: 45vh;
@@ -208,10 +207,6 @@ header {
     }
     .bottom {
         height: 50vh;
-        /* padding: 0 4vw; */
-        /* padding: 20px; */
-        /* flex-wrap: wrap; */
-        /* align-items: stretch; */
     }
     .bottom_card {
         align-items: center;
