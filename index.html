@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="2TA8ugUl1mW0xQyY4j0h-I12QKWmA-30abcLKVs2MwY" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Bingo</title>
+</head>
+
+<body>
+    <section id="container">
+        <main>
+            <header>
+                <div class="next_page" onclick="listPrevious(0)">CHECK</div>
+            </header>
+            <section class="top">
+                <div class="current" onclick="updateNumber()">
+                    <p class="sort"><span class="letter"></span><span class="number"></span></p>
+                </div>
+            </section>
+            <section class="bottom">
+                <div class="bottom_card">
+                    <div class="previous"></div>
+                    <div class="previous"></div>
+                    <div class="previous"></div>
+                    <!-- <div class="previous"></div> -->
+                    <div class="previous"></div>
+                    <div class="previous last"></div>
+                </div>
+            </section>
+        </main>
+        <section class="all_container">
+            <header>
+                <div class="next_page" onclick="listPrevious(1)">BACK</div>
+            </header>
+            <div class="all_numbers"></div>
+        </section>
+    </section>
+</body>
+<script src="script.js"></script>
+<script src="move.js"></script>
+
+</html>

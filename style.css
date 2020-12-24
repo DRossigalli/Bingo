@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+    user-select: none;
+    padding: 0;
+    font-family: Product;
+}
+/* @font-face {
+    src: url(assets/fonts/Arca.otf);
+    font-family: "Arca";
+} */
+@font-face {
+    src: url(assets/fonts/ProductSans.ttf);
+    font-family: "Product";
+}
+body {
+    background-color: rgb(32, 4, 110);
+}
+#container {
+    right: -100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+main {
+    min-width: 100vw;
+    height: 100%;
+    position: relative;
+    left: 0;
+}
+main.active {
+    animation: mainOut forwards .3s;
+}
+main.normal {
+    animation: mainIn forwards .3s;
+}
+@keyframes mainOut {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+@keyframes mainIn {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+header {
+    width: 100%;
+    height: 8vh;
+    background-color: rgb(25, 0, 95);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.next_page {
+    position: relative;
+    height: 60%;
+    width: 100px;
+    left: 25px;
+    font-size: 1.2em;
+    border-style: solid;
+    border-color: rgb(255, 72, 0);
+    border-radius: 50px;
+    border-width: 2px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top {
+    width: 100%;
+    height: 57vh;
+    background-color: rgb(32, 4, 110);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 800px;
+}
+.current {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(255, 72, 0); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+}
+.current:hover {
+    background-color: rgba(255, 255, 255, 0.034);
+}
+.sort {
+    font-weight: bold;
+    color: white;
+    font-size: 10em;
+}
+.letter {
+    color: rgb(255, 72, 0);
+}
+.bottom {
+    width: 100%;
+    height: 35vh;
+    background-color: rgb(32, 4, 110);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 11vw;
+    position: relative;
+    perspective: 800px;
+}
+.bottom_card {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(25, 0, 95);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+}
+.previous {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(255, 72, 0); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s all;
+    color: white;
+    font-size: 40px;
+    font-family: arial;
+}
+.previous:hover {
+    background-color: rgba(255, 255, 255, 0.034);
+}
+.all_container {
+    position: relative;
+    height: 100vh;
+    min-width: 100vw;
+    /* right: 0; */
+}
+.all_container.active {
+    animation: allIn forwards .3s;
+}
+.all_container.normal {
+    animation: allOut forwards .3s;
+}
+@keyframes allIn {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100%;
+    }
+}
+@keyframes allOut {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0;
+    }
+}
+.all_numbers {
+    overflow-y: auto;
+    height: 92vh;
+    width: 100vw;
+    padding: 50px;
+    /* right: 0; */
+    background-color: rgb(32, 4, 110);
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-row-gap: 50px;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+@media screen and (max-width: 600px) {
+    .next_page {
+        height: 50%;
+        /* left: 73%; */
+    }
+    .top {
+        height: 45vh;
+    }
+    .current {
+        width: 80vw;
+        height: 80vw;
+    }
+    .bottom {
+        height: 50vh;
+        /* padding: 0 4vw; */
+        /* padding: 20px; */
+        /* flex-wrap: wrap; */
+        /* align-items: stretch; */
+    }
+    .bottom_card {
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+    .previous {
+        margin: 5px;
+        width: 30vw;
+        height: 30vw;;
+    }
+    .all_numbers {
+        padding: 25px;
+        grid-template-columns: auto auto;
+    }
+}
