@@ -186,7 +186,6 @@ header {
     height: 92vh;
     width: 100vw;
     padding: 50px;
-    /* right: 0; */
     background-color: rgb(32, 4, 110);
     display: grid;
     grid-template-columns: auto auto auto auto auto;
