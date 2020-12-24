@@ -157,7 +157,6 @@ header {
     position: relative;
     height: 100vh;
     min-width: 100vw;
-    /* right: 0; */
 }
 .all_container.active {
     animation: allIn forwards .3s;
